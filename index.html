@@ -21,10 +21,17 @@
       'data': {
         'type': 'hbar',
         'title': {
-          'text': 'Los coches más vendidos en Granada en 2017'
+          'text': 'Los coches más vendidos en Granada en 2017',
+          'width': 500,
+          'border-bottom': '2px solid #92a6a6',
+          'clipText': false,
+          'font-family': "'Guardian Sans Web', 'Guardian Sans', 'Roboto' 'Helvetica', sans-serif",
+          'max-width': '590px',
+          'wrap-text': true,
+          'adjust-layout': true
         },
-        'subtitle': {
-          'text': 'Datos de MSI para Faconauto'
+        'source': {
+          'text': 'Fuente: MSI para Faconauto'
         },
         'series': [{
           'values': [422, 417, 364, 322, 319, 305, 286, 283, 266, 258].reverse(),
@@ -83,7 +90,7 @@
         },
         'plotarea': {
           'adjust-layout': true,
-          'margin-top': '60px',
+          'margin-top': '20px',
         }
       },
     })
