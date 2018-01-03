@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Matriculaciones en Granada</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+  <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="chart"></div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.12.2/d3.min.js"></script>
+  <script>
+    zingchart.render({
+      'id': 'chart',
+      'data': {
+        'type': 'hbar',
+        'title': {
+          'text': 'Los coches más vendidos en Granada en 2017'
+        },
+        'subtitle': {
+          'text': 'Datos de MSI para Faconauto'
+        },
+        'series': [{
+          'values': [422, 417, 364, 322, 319, 305, 286, 283, 266, 258].reverse(),
+          'background-color': '#b90021',
+          'alpha': 0.9,
+          'border-width': 1,
+          'border-color': '#92a6a6',
+          'hover-state': {
+            'background-color': '#92a6a6',
+            'border-width': 0,
+            'alpha': 0.8
+          }
+        }],
+        'scaleX': {
+          'label': {
+            'text': 'Marca y modelo',
+            'font-family': "'Guardian Sans Web', 'Guardian Sans', 'Roboto' 'Helvetica', sans-serif",
+          },
+          'item': {
+            'font-family': "'Guardian Sans Web', 'Guardian Sans', 'Roboto' 'Helvetica', sans-serif",
+            'visible': true
+          },          
+          'values': [
+          'Seat Ibiza', 'Dacia Sandero', 'Volkswagen Golf', 'Peugeot 308', 'Seat Leon', 'Volkswagen Tiguan', 'Seat Ateca', 'Renault Megane', 'Nissan Qashqai', 'Reanult Clio'
+          ].reverse()
+        },
+        'scaleY': {
+          'label': {
+            'text': 'Matriculaciones en 2017',
+            'font-family': "'Guardian Sans Web', 'Guardian Sans', 'Roboto' 'Helvetica', sans-serif",
+          },
+          'item': {
+            'font-family': "'Guardian Sans Web', 'Guardian Sans', 'Roboto' 'Helvetica', sans-serif",
+          }
+        },
+        'plot': {
+          'border-radius': '1px',
+          'value-box': [
+          {
+            'text': '%v',
+            'font-family': "'Guardian Sans Web', 'Guardian Sans', 'Roboto' 'Helvetica', sans-serif",
+            'placement': 'top-in',
+            'color': 'white'
+          }
+          ],
+          'tooltip': {
+            'visible': false
+          },
+          'animation': {
+            'delay': 300,
+            'effect': 13,
+            'speed': '200',
+            'method': '4',
+            'sequence': '0'
+          }
+        },
+        'plotarea': {
+          'adjust-layout': true,
+          'margin-top': '60px',
+        }
+      },
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Matriculaciones en Granada</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+  <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div id="brandChart"></div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.12.2/d3.min.js"></script>
+  <script>
+    zingchart.render({
+      'id': 'brandChart',
+      'data': {
+        'type': 'hbar',
+        'title': {
+          'text': 'Las marcas de los diez coches más vendidos en Granada en 2017'
+        },
+        'subtitle': {
+          'text': 'Datos de MSI para Faconauto'
+        },
+        'series': [{
+          'values': [1027, 669, 541, 417, 322, 266].reverse(),
+          'background-color': '#b90021',
+          'alpha': 0.9,
+          'border-width': 1,
+          'border-color': '#92a6a6',
+          'hover-state': {
+            'background-color': '#92a6a6',
+            'border-width': 0,
+            'alpha': 0.8
+          }
+        }],
+        labels: [
+        {
+          'text':'',
+          'height': 50,
+          'width': 50,
+          'backgroundImage':'/img/nissan.png',
+          'hook': 'scale:name=scale-x,index=0',
+          'offsetX': -40,
+          'offsetY': 7,
+        },
+        {
+          'text':'',
+          'height': 50,
+          'width': 50,
+          'backgroundImage':'/img/peugeot.png',
+          'hook': 'scale:name=scale-x,index=1',
+          'offsetX': -40,
+          'offsetY': 7,
+        },
+        {
+          'text':'',
+          'height': 50,
+          'width': 50,
+          'backgroundImage':'/img/dacia.png',
+          'hook': 'scale:name=scale-x,index=2',
+          'offsetX': -40,
+          'offsetY': 7,
+        },
+        {
+          'text':'',
+          'height': 50,
+          'width': 50,
+          'backgroundImage':'/img/renault.png',
+          'hook': 'scale:name=scale-x,index=3',
+          'offsetX': -40,
+          'offsetY': 7,
+        },
+        {
+          'text':'',
+          'height': 50,
+          'width': 50,
+          'backgroundImage':'/img/volkswagen.png',
+          'hook': 'scale:name=scale-x,index=4',
+          'offsetX': -40,
+          'offsetY': 7,
+        },
+        {
+          'text':'',
+          'height': 50,
+          'width': 50,
+          'backgroundImage':'/img/seat.png',
+          'hook': 'scale:name=scale-x,index=5',
+          'offsetX': -40,
+          'offsetY': 7,
+        }
+        ],
+        'scaleX': {
+          'label': {
+            'text': 'Marca',
+            'font-family': "'Guardian Sans Web', 'Guardian Sans', 'Roboto' 'Helvetica', sans-serif",
+            'visible': false
+          },
+          'item': {
+            'font-family': "'Guardian Sans Web', 'Guardian Sans', 'Roboto' 'Helvetica', sans-serif",
+            'visible': false
+          },          
+          'values': [
+            'Seat', 'Volkswagen', 'Reanult', 'Dacia', 'Peugeot', 'Nissan'
+          ].reverse()
+        },
+        'scaleY': {
+          'label': {
+            'text': 'Matriculaciones en 2017',
+            'font-family': "'Guardian Sans Web', 'Guardian Sans', 'Roboto' 'Helvetica', sans-serif",
+          },
+          'item': {
+            'font-family': "'Guardian Sans Web', 'Guardian Sans', 'Roboto' 'Helvetica', sans-serif",
+          }
+        },
+        'plot': {
+          'border-radius': '1px',
+          'value-box': [
+          {
+            'text': '%v',
+            'font-family': "'Guardian Sans Web', 'Guardian Sans', 'Roboto' 'Helvetica', sans-serif",
+            'placement': 'top-in',
+            'color': 'white'
+          }
+          ],
+          'tooltip': {
+            'visible': false
+          },
+          'animation': {
+            'delay': 300,
+            'effect': 13,
+            'speed': '200',
+            'method': '4',
+            'sequence': '0'
+          }
+        },
+        'plotarea': {
+          'adjustLayout': true,
+          'margin-top': '60px',
+          'marginLeftOffset': 100
+        }
+      },
+    })
+  </script>
+</body>
+</html>
